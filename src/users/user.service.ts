@@ -4,6 +4,7 @@ import {
   Injectable,
   InternalServerErrorException,
   Logger,
+  NotFoundException,
 } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { User } from "./entity/user-entity";
@@ -55,5 +56,36 @@ export class UserService {
       console.log(error.code);
       throw new InternalServerErrorException();
     }
+  }
+
+  async findOneById(id: number): Promise<User> {
+    try {
+      return await this.userRepository.findOneBy({ id: id });
+    } catch (error) {
+      if (error instanceof QueryFailedError) {
+        this.logger.log(`${error.stack}, ${error.message}`);
+        this.logger.log(
+          `Failed to find user with provided id: Cause : ${error.message.toString()}`
+        );
+        throw new NotFoundException({ "User not found": error.message });
+      }
+      throw new InternalServerErrorException("Failed to find user");
+    }
+  }
+
+  async findUserByEmail(email: string): Promise<User | null> {
+    try {
+      const user = await this.userRepository.findOneBy({ email });
+      if (!user) {
+        return null;
+      }
+      return user;
+    } catch (error) {
+      if (error instanceof QueryFailedError) {
+        this.logger.log(`${error.stack}, ${error.message}`);
+        throw new NotFoundException({ "User not found": error.message });
+      }
+    }
+    return null;
   }
 }

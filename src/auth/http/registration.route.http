@@ -3,7 +3,16 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-  "name": "Jordach Makaya",
-  "email": "content@me.fr",
+  "name": "Samira Makaya",
+  "email": "sam@me.fr",
+  "password": "Password@@2026"
+}
+
+### Send POST request with json body
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "1sam@me.fr",
   "password": "Password@@2026"
 }

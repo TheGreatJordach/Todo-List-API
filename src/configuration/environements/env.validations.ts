@@ -26,6 +26,8 @@ export class EnvValidations {
   SWAGGER_PATH: string;
   @IsPositiveInteger()
   SALT_ROUNDS: number;
+  @IsNonEmptyString()
+  JWT_SECRET: string;
 }
 
 export function validateEnv(config: Record<string, unknown>) {
