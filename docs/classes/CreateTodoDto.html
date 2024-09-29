@@ -79,7 +79,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-variables">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -93,73 +93,133 @@
 
 
 
-
-
-
-
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Miscellaneous</li>
-  <li class="breadcrumb-item">Variables</li>
+  <li class="breadcrumb-item">Classes</li>
+  <li class="breadcrumb-item" >CreateTodoDto</li>
 </ol>
 
-<section data-compodoc="block-index">
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/todos/dto/create-todo.dto.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../classes/BaseTodoDto.html" target="_self" >BaseTodoDto</a></code>
+            </p>
+
+
+
+            <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#getDevDatabaseConfig" title="src/configuration/database/dev-database.config.ts" ><b>getDevDatabaseConfig</b>&nbsp;&nbsp;&nbsp;(src/.../dev-database.config.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#getDevDataSourceFactory" title="src/configuration/database/dev-database.config.ts" ><b>getDevDataSourceFactory</b>&nbsp;&nbsp;&nbsp;(src/.../dev-database.config.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#jwtConfig" title="src/configuration/jwt/jwt-config.ts" ><b>jwtConfig</b>&nbsp;&nbsp;&nbsp;(src/.../jwt-config.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#module" title="src/main.ts" ><b>module</b>&nbsp;&nbsp;&nbsp;(src/.../main.ts)</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#description" >description</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#title" >title</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#user" >user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
         </tbody>
     </table>
 </section>
 
-    <h3>src/configuration/database/dev-database.config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
+
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getDevDatabaseConfig"></a>
+                    <a name="description"></a>
                     <span class="name">
-                        <span ><b>getDevDatabaseConfig</b></span>
-                        <a href="#getDevDatabaseConfig"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier"></span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>description</b></span>
+                        <a href="#description"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>async (
-  configService: ConfigService
-): Promise&lt;TypeOrmModuleOptions&gt; &#x3D;&gt; ({
-  type: &quot;postgres&quot;,
-  host: configService.get&lt;string&gt;(&quot;DATASOURCE_HOST&quot;),
-  port: configService.get&lt;number&gt;(&quot;DATASOURCE_PORT&quot;),
-  username: configService.get&lt;string&gt;(&quot;DATASOURCE_USERNAME&quot;),
-  password: configService.get&lt;string&gt;(&quot;DATASOURCE_PASSWORD&quot;),
-  database: configService.get&lt;string&gt;(&quot;DATASOURCE_DATABASE&quot;),
-  entities: [User, Todo],
-  synchronize: configService.get&lt;boolean&gt;(&quot;DATASOURCE_SYNCHRONIZATION&quot;),
-  logging: configService.get&lt;boolean&gt;(&quot;DATASOURCE_LOGGING&quot;),
-})</code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsNonEmptyString()<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../classes/BaseTodoDto.html" target="_self" >BaseTodoDto</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/BaseTodoDto.html#source" target="_self" >BaseTodoDto:10</a></code>
+</div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -168,89 +228,115 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getDevDataSourceFactory"></a>
+                    <a name="title"></a>
                     <span class="name">
-                        <span ><b>getDevDataSourceFactory</b></span>
-                        <a href="#getDevDataSourceFactory"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier"></span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>title</b></span>
+                        <a href="#title"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>async (options) &#x3D;&gt; {
-  const logger &#x3D; new Logger(&quot;Database Config&quot;);
-  if (!options) {
-    logger.fatal(&quot;🤬 Options must be provided for database in ModuleConfig&quot;);
-    throw new Error(&quot;DataSourceOption not provided&quot;);
-  }
-  const dataSource &#x3D; new DataSource(options);
-  await dataSource.initialize();
-  logger.log(&quot;🤘 Connection with Dev Database successfully established&quot;);
-  return dataSource;
-}</code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @IsNonEmptyString()<br />
+                        </code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../classes/BaseTodoDto.html" target="_self" >BaseTodoDto</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/BaseTodoDto.html#source" target="_self" >BaseTodoDto:8</a></code>
+</div>
+                        </td>
+                    </tr>
 
 
         </tbody>
     </table>
-</section>
-    <h3>src/configuration/jwt/jwt-config.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
+    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="jwtConfig"></a>
+                    <a name="user"></a>
                     <span class="name">
-                        <span ><b>jwtConfig</b></span>
-                        <a href="#jwtConfig"><span class="icon ion-ios-link"></span></a>
+                            <span class="modifier"></span>
+                            <span class="modifier"></span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>user</b></span>
+                        <a href="#user"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                        <i>Type : </i>        <code><a href="../entitys/User.html" target="_self" >User</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>{
-  secret: process.env.JWT_SECRET,
-  expireIn: process.env.JWT_TOKEN_EXPIRE_IN,
-}</code>
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Type(undefined)<br />@ValidateNested()<br />
+                        </code>
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Inherited from         <code><a href="../classes/BaseTodoDto.html" target="_self" >BaseTodoDto</a></code>
+</div>
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in         <code><a href="../classes/BaseTodoDto.html#source" target="_self" >BaseTodoDto:13</a></code>
+</div>
+                        </td>
+                    </tr>
 
 
         </tbody>
     </table>
 </section>
-    <h3>src/main.ts</h3>
-    <section data-compodoc="block-properties">
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="module"></a>
-                    <span class="name">
-                        <span ><b>module</b></span>
-                        <a href="#module"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </td>
-                </tr>
 
 
-        </tbody>
-    </table>
-</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseTodoDto } from &quot;./base-todo.dto&quot;;
+
+export class CreateTodoDto extends BaseTodoDto {}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
 
 
 
@@ -279,8 +365,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
-            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateTodoDto.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
