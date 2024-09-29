@@ -2,6 +2,8 @@ import { ConfigService } from "@nestjs/config";
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
 import { DataSource } from "typeorm";
 import { Logger } from "@nestjs/common";
+import { User } from "../../users/entity/user-entity";
+import { Todo } from "../../todos/entity/todo-entity";
 
 export const getDevDatabaseConfig = async (
   configService: ConfigService
@@ -12,7 +14,7 @@ export const getDevDatabaseConfig = async (
   username: configService.get<string>("DATASOURCE_USERNAME"),
   password: configService.get<string>("DATASOURCE_PASSWORD"),
   database: configService.get<string>("DATASOURCE_DATABASE"),
-  entities: [],
+  entities: [User, Todo],
   synchronize: configService.get<boolean>("DATASOURCE_SYNCHRONIZATION"),
   logging: configService.get<boolean>("DATASOURCE_LOGGING"),
 });
