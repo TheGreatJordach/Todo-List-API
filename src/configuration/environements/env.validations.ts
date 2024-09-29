@@ -24,6 +24,8 @@ export class EnvValidations {
   APP_PORT: number;
   @IsNonEmptyString()
   SWAGGER_PATH: string;
+  @IsPositiveInteger()
+  SALT_ROUNDS: number;
 }
 
 export function validateEnv(config: Record<string, unknown>) {

@@ -1,8 +1,9 @@
 ### Send POST request with json body
-POST http://localhost:3000
+POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-  "id": 999,
-  "value": "content"
+  "name": "Jordach Makaya",
+  "email": "content@me.fr",
+  "password": "Password@@2026"
 }
